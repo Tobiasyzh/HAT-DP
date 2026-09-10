@@ -394,7 +394,7 @@ def main(
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", type=str, default="bpda+eot")
-    parser.add_argument("--T", type=int, default=240)
+    parser.add_argument("--T", type=int, default=280)    # 240
     parser.add_argument("--scale", type=float, default=92000)
     parser.add_argument("--bs", type=int, default=64)
     parser.add_argument("--alpha", type=float, default=2 / 255)
