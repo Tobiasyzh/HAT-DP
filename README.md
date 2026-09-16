@@ -65,6 +65,7 @@ CUDA_VISIBLE_DEVICES=0 python -u eval_hatdp_cifar10_strong_bpda_eot.py \
 ```
 ### Run on CIFAR-100
 #### Pre-Train
+Pre-train a CIFAR-100 unconditional DDPM prior by fine-tuning the CIFAR-10 pretrained diffusion checkpoint for 100 epochs.
 ```bash
 CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -u train_cifar100_diffusion_prior.py \
   --data-root . \
@@ -79,6 +80,7 @@ CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -u train_cifar100_diffusion_prio
   --device cuda
 ```
 #### Train
+Train HAT-DP on CIFAR-100 using the dataset-matched CIFAR-100 diffusion prior and the fixed WRN-28-10 classifier.
 ```bash
 CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -u train_hatdp_cifar100.py \
   --base-checkpoint checkpoints/cifar100_prior_from_cifar10_100ep_bs256/cifar100_uncond_from_cifar10_100ep_ema.pt \
