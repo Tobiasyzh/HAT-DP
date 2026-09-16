@@ -22,8 +22,8 @@ class BPDA_EOT_Attack():
             self,
             model,
             adv_eps=8.0/255,
-            adv_steps=40,
-            eot_defense_reps=2,
+            adv_steps=50,
+            eot_defense_reps=150,
             eot_attack_reps=15,
             adv_eta=2.0/255,
     ):
