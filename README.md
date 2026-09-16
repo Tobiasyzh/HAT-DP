@@ -26,6 +26,7 @@ You can download pretrained models here:
 ## Run experiments
 ### Run on CIFAR-10
 #### Train
+```bash
 cd /path/to/cifar10
 
 CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -u train_addt_best_server_reference.py \
@@ -42,6 +43,7 @@ CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -u train_addt_best_server_refere
   --lambda-min 0.05 \
   --lambda-max 0.4 \
   --seed 42
+```
 #### Eval
 ### Run on CIFAR-100
 #### Train
