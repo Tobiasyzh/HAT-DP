@@ -27,6 +27,7 @@ You can download pretrained models here:
 ## Run experiments
 ### Run on CIFAR-10
 #### Train
+Train HAT-DP on CIFAR-10 using the pretrained CIFAR-10 diffusion purifier and the fixed target classifier.
 ```bash
 cd /path/to/cifar10
 
@@ -46,6 +47,7 @@ CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -u train_addt_best_server_refere
   --seed 42
 ```
 #### Eval on BPDA+EOT
+Evaluate the trained HAT-DP model on CIFAR-10 under the fully adaptive BPDA+EOT attack.
 ```bash
 CUDA_VISIBLE_DEVICES=0 python -u eval_hatdp_cifar10_strong_bpda_eot.py \
   --mode bpda_eot \
