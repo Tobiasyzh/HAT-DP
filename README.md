@@ -23,6 +23,32 @@ You can download pretrained models here:
 - DDPM on Cifar10 [https://github.com/openai/improved-diffusion](https://github.com/openai/improved-diffusion)
   - checkpoint [cifar10_uncond_50M_500K.pt](https://openaipublic.blob.core.windows.net/diffusion/march-2021/cifar10_uncond_50M_500K.pt)
 
+## Run experiments
+### Run on CIFAR-10
+#### Train
+cd /path/to/cifar10
+
+CUDA_VISIBLE_DEVICES=0 OMP_NUM_THREADS=4 python -u train_addt_best_server_reference.py \
+  --base-checkpoint cifar10_uncond_50M_500K.pt \
+  --out-checkpoint checkpoints/strong_supervised_addt_latest2_last.pt \
+  --finetune-mode last \
+  --train-output-blocks 5 \
+  --steps 5000 \
+  --bs 16 \
+  --lr 3e-6 \
+  --t-min 150 \
+  --t-max 600 \
+  --lambda-unit 0.3 \
+  --lambda-min 0.05 \
+  --lambda-max 0.4 \
+  --seed 42
+#### Eval
+### Run on CIFAR-100
+#### Train
+#### Eval
+### Run on ImageNet
+#### Train
+#### Eval
 ## Citation
 
 Citation information will be added after publication.
