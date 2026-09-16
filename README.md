@@ -7,6 +7,7 @@ HAT-DP adapts a pretrained diffusion purifier with hierarchical adversarial thre
 ## Repository structure
 
 - `CIFAR10/`: CIFAR-10 experiments and diffusion-purifier implementation.
+- `CIFAR100/`: CIFAR-100 experiments and diffusion-purifier implementation.
 - `ImageNet/`: ImageNet experiments and guided-diffusion implementation.
 - `requirements.txt`: core Python dependencies.
 
